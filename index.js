@@ -1,12 +1,12 @@
 function rentPrice(days) {
+	const allPrice = days * 25;
 
 	if (days > 3 && days <= 7) {
-		return days * 25 - (days - 3) * 5;
+		return allPrice - (days - 3) * 5;
 	} else if (days > 7) {
-		return days * 25 - ((days - 7) * 10 + 20);
-	} else {
-		return days * 25;
+		return allPrice - ((days - 7) * 10 + 20);
 	}
+	return allPrice;
 }
 
 module.exports = rentPrice;
